@@ -4,7 +4,11 @@ Criar:
  - from pyspark import SparkContext, SparkConf
  - conf = SparkConf().setAppName('nome').setMaster('local[num_processadores]') -> execução local
  - sc = SparkContext(conf=conf)
- 
+
+Criar sessão definindo algumas configurações:
+ - from pyspark import SparkSession
+ - spark = SparkSession.builder.appName('nome').config()...
+
 Parar:
 
  - SparkContext().stop()
