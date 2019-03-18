@@ -7,9 +7,14 @@ Criar:
 
 Criar sessão definindo algumas configurações:
  - from pyspark import SparkSession
- - spark = SparkSession.builder.appName('nome').config()...
-
-Parar:
+ - spark = SparkSession.builder.appName('nome').master('local[qtd_processadores]') \
+					   .config('spark.executor.memory', '30g') \
+                       .config('spark.driver.memory', '40g') \
+                       .config('spark.memory.offHeap.enabled', 'true') \
+                       .config('spark.memory.offHeap.size', '30g') \
+                       .getOrCreate()
+ 
+ Parar:
 
  - SparkContext().stop()
  
