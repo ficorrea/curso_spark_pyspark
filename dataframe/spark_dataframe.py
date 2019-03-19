@@ -16,6 +16,8 @@ df.printSchema()
 df.describe()
 df.columns
 df.describe().show()
+# Para remover trunc
+df.show(truncate=False)
 
 # Caso seja necessário alterar o schema de um dataset
 from pyspark.sql.types import StructField, StringType, StructType, IntegerType
