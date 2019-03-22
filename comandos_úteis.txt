@@ -15,10 +15,15 @@ Criar sessão definindo algumas configurações:
                        .getOrCreate()
  
  Parar:
-
  - SparkContext().stop()
  
 Se executando:
-
  - sc = SparkContext().getOrCreate()
  - sc.stop()
+
+ Salvar e carregar modelo:
+  - modelo.save('arquivo')
+  - modelo = TipoDeModelo.load('arquivo')
+  
+  Ex: model.save(“myModelPath”)
+	  sameModel = RandomForestClassificationModel.load(“myModelPath”)
