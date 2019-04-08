@@ -21,9 +21,13 @@ Se executando:
  - sc = SparkContext().getOrCreate()
  - sc.stop()
 
- Salvar e carregar modelo:
-  - modelo.save('arquivo')
-  - modelo = TipoDeModelo.load('arquivo')
+Salvar e carregar modelo:
+ - modelo.save('arquivo')
+ - modelo = TipoDeModelo.load('arquivo')
   
   Ex: model.save(“myModelPath”)
 	  sameModel = RandomForestClassificationModel.load(“myModelPath”)
+	  
+Executar na linha de comando:
+ - spark-submit --driver-memory XXG --executor-memory XXG 
+(este comando pode ser configurado de várias maneiras)
