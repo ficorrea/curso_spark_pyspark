@@ -31,3 +31,8 @@ Salvar e carregar modelo:
 Executar na linha de comando:
  - spark-submit --driver-memory XXG --executor-memory XXG 
 (este comando pode ser configurado de várias maneiras)
+
+Apaga logs terminal
+spark.SparkSession().getOrCreate()
+spark.sparkContext.setLogLevel('ERROR')
+Tipos de logs: ALL, DEBUG, ERROR, FATAL, INFO, OFF, TRACE, WARN
